@@ -436,6 +436,8 @@ static const struct oscap_string_map OVAL_SUBTYPE_AIX_MAP[] = {
 	{OVAL_AIX_FILESET, "fileset"},
 	{OVAL_AIX_FIX, "fix"},
 	{OVAL_AIX_OSLEVEL, "oslevel"},
+	{OVAL_AIX_INTERIM_FIX, "interim_fix"},
+	{OVAL_AIX_NO, "no"},
 	{OVAL_SUBTYPE_UNKNOWN, NULL}
 };
 
@@ -696,6 +698,8 @@ oval_subtype_t oval_subtype_parse(xmlTextReaderPtr reader)
 	}
 
 	subtype = oscap_string_to_enum(map, tagname);
+	dW("TAG");
+	dW(tagname);
 	if (subtype == OVAL_SUBTYPE_UNKNOWN) {
 		dW("Unknown OVAL family subtype: %s", tagname);
 	}
