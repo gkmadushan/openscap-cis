@@ -698,8 +698,6 @@ oval_subtype_t oval_subtype_parse(xmlTextReaderPtr reader)
 	}
 
 	subtype = oscap_string_to_enum(map, tagname);
-	dW("TAG");
-	dW(tagname);
 	if (subtype == OVAL_SUBTYPE_UNKNOWN) {
 		dW("Unknown OVAL family subtype: %s", tagname);
 	}

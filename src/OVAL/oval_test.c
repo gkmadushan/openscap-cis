@@ -391,8 +391,7 @@ int oval_test_parse_tag(xmlTextReaderPtr reader, struct oval_parser_context *con
 	
 	struct oval_test *test = oval_definition_model_get_new_test(model, id);
 
-	oval_subtype_t subtype = oval_subtype_parse(reader);
-	dW("CHI");
+	oval_subtype_t subtype = oval_subtype_parse(reader);	
         if ( subtype == OVAL_SUBTYPE_UNKNOWN) {
 		oscap_seterr(OSCAP_EFAMILY_OVAL, "Unknown test type %s.", id);
 		ret = -1;
