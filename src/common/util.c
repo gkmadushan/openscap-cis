@@ -51,9 +51,6 @@
 
 int oscap_string_to_enum(const struct oscap_string_map *map, const char *str)
 {
-	dW("TAGGG");
-	dW(str);
-	dW("]");
 	__attribute__nonnull__(map);
 
 	while (map->string && (str == NULL || strcmp(map->string, str) != 0))
